@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TestArea
 {
-    class RomanToInteger
+    public class RomanToInteger
     {
         /// <summary>
         /// Converts Roman characters ('I', 'V', 'X', 'L', 'C', 'D', 'M') into numbers.
