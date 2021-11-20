@@ -21,6 +21,15 @@ namespace TestArea
             Console.WriteLine($"{string.Join(",", strs)} longest prefix: {longestCommonPrefix.LongestComPrefix(strs)}");
             string[] strs2 = { "dog","racecar","car" };
             Console.WriteLine($"{string.Join(",", strs2)} longest prefix: {longestCommonPrefix.LongestComPrefix(strs2)} ");
+            Console.WriteLine("");
+
+            ValidParentheses validParentheses = new ValidParentheses();
+            Console.WriteLine($"() is {validParentheses.IsValid("()")}");
+            Console.WriteLine($"()[]{{}} is {validParentheses.IsValid("()[]{{}}")}");
+            Console.WriteLine($"(] is {validParentheses.IsValid("(]")}");
+            Console.WriteLine($"([)] is {validParentheses.IsValid("([)]")}");
+            Console.WriteLine($"{{[]}} is {validParentheses.IsValid("{{[]}}")}");
+            Console.WriteLine("");
         }
     }
 }
