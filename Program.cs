@@ -30,6 +30,20 @@ namespace TestArea
             Console.WriteLine($"([)] is {validParentheses.IsValid("([)]")}");
             Console.WriteLine($"{{[]}} is {validParentheses.IsValid("{{[]}}")}");
             Console.WriteLine("");
+
+            MergeTwoSortedList mergeTwoSortedList = new MergeTwoSortedList();
+            ListNode emptyNode = new ListNode(null);
+            ListNode l1Head = new ListNode(1);
+            ListNode l2Head = new ListNode(1);
+            l1Head.next = new ListNode(2);
+            l2Head.next = new ListNode(4);
+            l1Head.next.next = new ListNode(3);
+            ListNode result = mergeTwoSortedList.MergeTwoLists(l1Head, l2Head);
+            while(result!=null){
+                Console.Write($"{result.val} -> ");
+                result = result.next;
+            }
+            Console.WriteLine("");
         }
     }
 }
