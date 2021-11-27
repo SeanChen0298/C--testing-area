@@ -19,7 +19,7 @@ namespace TestArea
             LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
             string[] strs = { "flower", "flow", "flight" };
             Console.WriteLine($"{string.Join(",", strs)} longest prefix: {longestCommonPrefix.LongestComPrefix(strs)}");
-            string[] strs2 = { "dog","racecar","car" };
+            string[] strs2 = { "dog", "racecar", "car" };
             Console.WriteLine($"{string.Join(",", strs2)} longest prefix: {longestCommonPrefix.LongestComPrefix(strs2)} ");
             Console.WriteLine("");
 
@@ -39,11 +39,16 @@ namespace TestArea
             l2Head.next = new ListNode(4);
             l1Head.next.next = new ListNode(3);
             ListNode result = mergeTwoSortedList.MergeTwoLists(l1Head, l2Head);
-            while(result!=null){
+            while (result != null)
+            {
                 Console.Write($"{result.val} -> ");
                 result = result.next;
             }
             Console.WriteLine("");
+
+            RemoveDuplicate removeDuplicate = new RemoveDuplicate();
+            int[] list = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+            removeDuplicate.RemoveDuplicates(list);
         }
     }
 }
